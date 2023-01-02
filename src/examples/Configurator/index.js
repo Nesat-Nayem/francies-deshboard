@@ -79,10 +79,17 @@ function Configurator() {
   }, []);
 
   const handleCloseConfigurator = () => setOpenConfigurator(dispatch, false);
+
+
+
+
+
+  
   const handleTransparentSidenav = () => {
     setTransparentSidenav(dispatch, true);
     setWhiteSidenav(dispatch, false);
   };
+
   const handleWhiteSidenav = () => {
     setWhiteSidenav(dispatch, true);
     setTransparentSidenav(dispatch, false);
@@ -91,6 +98,11 @@ function Configurator() {
     setWhiteSidenav(dispatch, false);
     setTransparentSidenav(dispatch, false);
   };
+
+
+
+
+
   const handleFixedNavbar = () => setFixedNavbar(dispatch, !fixedNavbar);
   const handleDarkMode = () => setDarkMode(dispatch, !darkMode);
 
@@ -208,6 +220,17 @@ function Configurator() {
           </MDBox>
         </MDBox>
 
+
+
+
+
+
+
+
+
+
+
+
         <MDBox mt={3} lineHeight={1}>
           <MDTypography variant="h6">Sidenav Type</MDTypography>
           <MDTypography variant="button" color="text">
@@ -267,6 +290,22 @@ function Configurator() {
             </MDButton>
           </MDBox>
         </MDBox>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         <MDBox
           display="flex"
           justifyContent="space-between"

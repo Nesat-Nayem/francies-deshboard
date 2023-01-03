@@ -94,15 +94,16 @@ function Header({ children }) {
       >
         <Grid container spacing={3} alignItems="center">
           <Grid item>
-            <MDAvatar src={burceMars} alt="profile-image" size="xl" shadow="sm" />
+            {/* <MDAvatar src={burceMars} alt="profile-image" size="xl" shadow="sm" /> */}
+            <MDAvatar src="https://i.postimg.cc/nr6bk3yk/jon.jpg" alt="profile-image" size="xl" shadow="sm" />
           </Grid>
           <Grid item>
             <MDBox height="100%" mt={0.5} lineHeight={1}>
               <MDTypography variant="h5" fontWeight="medium">
-                Richard Davis
+                David Smith
               </MDTypography>
               <MDTypography variant="button" color="text" fontWeight="regular">
-                CEO / Co-Founder
+                Delhi Francies
               </MDTypography>
             </MDBox>
           </Grid>
@@ -117,14 +118,14 @@ function Header({ children }) {
                     </Icon>
                   }
                 />
-                <Tab
+                {/* <Tab
                   label="Message"
                   icon={
                     <Icon fontSize="small" sx={{ mt: -0.25 }}>
                       email
                     </Icon>
                   }
-                />
+                /> */}
                 <Tab
                   label="Settings"
                   icon={

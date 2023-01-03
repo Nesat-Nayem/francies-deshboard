@@ -44,9 +44,10 @@ import Notifications from "layouts/notifications";
 import Profile from "layouts/profile";
 import SignIn from "layouts/authentication/sign-in";
 import SignUp from "layouts/authentication/sign-up";
-
+import BakeryDiningIcon from '@mui/icons-material/BakeryDining';
 // @mui icons
 import Icon from "@mui/material/Icon";
+import Services from "layouts/services";
 
 const routes = [
   {
@@ -61,7 +62,7 @@ const routes = [
     type: "collapse",
     name: "Profile",
     key: "profile",
-    icon: <Icon fontSize="small">person</Icon>,
+    icon: <Icon fontSize="small">person4Icon</Icon>,
     route: "/profile",
     component: <Profile />,
   },
@@ -69,17 +70,26 @@ const routes = [
     type: "collapse",
     name: "Customers",
     key: "tables",
-    icon: <Icon fontSize="small">table_view</Icon>,
+    icon: <Icon fontSize="small">peopleAltIcon</Icon>,
     route: "/tables",
     component: <Tables />,
   },
+  // {
+  //   type: "collapse",
+  //   name: "Services",
+  //   key: "billing",
+  //   icon: <Icon fontSize="small">receipt_long</Icon>,
+  //   route: "/billing",
+  //   component: <Billing />,
+  // },
   {
     type: "collapse",
     name: "Services",
     key: "billing",
     icon: <Icon fontSize="small">receipt_long</Icon>,
+    // icon: <Icon fontSize="small"><receipt_long /></Icon>,
     route: "/billing",
-    component: <Billing />,
+    component: <Services />,
   },
   // {
   //   type: "collapse",
@@ -93,27 +103,51 @@ const routes = [
     type: "collapse",
     name: "Invoince",
     key: "notifications",
-    icon: <Icon fontSize="small">notifications</Icon>,
-    route: "/notifications",
+    icon: <Icon fontSize="small">receipt</Icon>,
+    route: "",
     component: <Notifications />,
   },
+  // {
+  //   type: "collapse",
+  //   name: "Invoince",
+  //   key: "notifications",
+  //   icon: <Icon fontSize="small">notifications</Icon>,
+  //   route: "/notifications",
+  //   component: <Notifications />,
+  // },
 
   {
     type: "collapse",
-    name: "Order Ravinew",
+    name: "Ravinew",
     key: "sign-in",
-    icon: <Icon fontSize="small">login</Icon>,
-    route: "/authentication/sign-in",
+    icon: <Icon fontSize="small">stacked_bar_chart</Icon>,
+    route: "",
     component: <SignIn />,
   },
+  // {
+  //   type: "collapse",
+  //   name: "Order Ravinew",
+  //   key: "sign-in",
+  //   icon: <Icon fontSize="small">login</Icon>,
+  //   route: "/authentication/sign-in",
+  //   component: <SignIn />,
+  // },
   {
     type: "collapse",
     name: "Report",
     key: "sign-up",
-    icon: <Icon fontSize="small">assignment</Icon>,
-    route: "/authentication/sign-up",
+    icon: <Icon fontSize="small">summarize</Icon>,
+    route: "",
     component: <SignUp />,
   },
+  // {
+  //   type: "collapse",
+  //   name: "Report",
+  //   key: "sign-up",
+  //   icon: <Icon fontSize="small">assignment</Icon>,
+  //   route: "/authentication/sign-up",
+  //   component: <SignUp />,
+  // },
 ];
 
 export default routes;

@@ -36,8 +36,9 @@ import DefaultProjectCard from "examples/Cards/ProjectCards/DefaultProjectCard";
 
 // Overview page components
 import Header from "layouts/profile/components/Header";
-import PlatformSettings from "layouts/profile/components/PlatformSettings";
-
+// import PlatformSettings from "layouts/profile/components/PlatformSettings";
+import Invoices from "layouts/profile/components/Invoices";
+// import Invoices from "layouts/billing/components/Invoices";
 // Data
 import profilesListData from "layouts/profile/data/profilesListData";
 
@@ -59,14 +60,11 @@ function Overview() {
       <Header>
         <MDBox mt={5} mb={3}>
           <Grid container spacing={1}>
-            <Grid item xs={12} md={6} xl={4}>
-              <PlatformSettings />
-            </Grid>
-            <Grid item xs={12} md={6} xl={4} sx={{ display: "flex" }}>
+          <Grid item xs={12} md={6} xl={4} sx={{ display: "flex" }}>
               <Divider orientation="vertical" sx={{ ml: -2, mr: 1 }} />
               <ProfileInfoCard
                 title="profile information"
-                description="Hi, I’m Alec Thompson, Decisions: If you can’t decide, the answer is no. If two equally difficult paths, choose the one more painful in the short term (pain avoidance is creating an illusion of equality)."
+                // description="Hi, I’m Alec Thompson, Decisions: If you can’t decide, the answer is no. If two equally difficult paths, choose the one more painful in the short term (pain avoidance is creating an illusion of equality)."
                 info={{
                   fullName: "Alec M. Thompson",
                   mobile: "(44) 123 1234 123",
@@ -95,6 +93,11 @@ function Overview() {
               />
               <Divider orientation="vertical" sx={{ mx: 0 }} />
             </Grid>
+            <Grid item xs={12} md={6} xl={4}>
+              {/* <PlatformSettings /> */}
+              <Invoices />
+            </Grid>
+     
             <Grid item xs={12} xl={4}>
               <ProfilesList title="latest customers" profiles={profilesListData} shadow={false} />
             </Grid>

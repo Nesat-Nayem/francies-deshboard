@@ -48,6 +48,8 @@ import BakeryDiningIcon from '@mui/icons-material/BakeryDining';
 // @mui icons
 import Icon from "@mui/material/Icon";
 import Services from "layouts/services";
+import Invoince from "layouts/invoince";
+import Revinue from "layouts/revinue";
 
 const routes = [
   {
@@ -104,8 +106,8 @@ const routes = [
     name: "Invoince",
     key: "notifications",
     icon: <Icon fontSize="small">receipt</Icon>,
-    route: "",
-    component: <Notifications />,
+    route: "/invoince",
+    component: <Invoince />,
   },
   // {
   //   type: "collapse",
@@ -121,8 +123,8 @@ const routes = [
     name: "Ravinew",
     key: "sign-in",
     icon: <Icon fontSize="small">stacked_bar_chart</Icon>,
-    route: "",
-    component: <SignIn />,
+    route: "/revenue",
+    component: <Revinue />,
   },
   // {
   //   type: "collapse",

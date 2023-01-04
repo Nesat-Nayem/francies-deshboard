@@ -1,0 +1,220 @@
+/* ======= google fonts ============= */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap");
+
+/* ======== css variables ========= */
+
+
+/* ======== base style ============ */
+/* * {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+} */
+
+
+
+a {
+  text-decoration: none;
+  color: unset;
+}
+
+
+
+
+p {
+  font-size: 0.8rem;
+  color: #02040f;
+}
+
+.main__container {
+  position: absolute;
+  top: 0;
+  left: 10%;
+  width: calc(100% - 13%);
+  padding: 30px 0px;
+}
+
+.pending__status,
+.paid__status,
+.draft__status,
+.edit__btn,
+.delete__btn,
+.mark__as-btn,
+.draft__btn {
+  padding: 10px 25px;
+  width: 100px;
+  border-radius: 5px;
+  font-size: 0.8rem;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.paid__status {
+  background: #1f2c3f;
+  color: #32cf9b;
+}
+
+.pending__status {
+  background: rgba(255, 143, 0, 0.06);
+  color: #ff8f00;
+}
+
+
+.invoice__total{
+  font-size: 1rem;
+  font-weight: bold;
+}
+/* =========== home page style start =========== */
+.invoice__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 50px;
+}
+
+.invoice__header-logo h3 {
+  color: #fff;
+}
+
+.invoice__item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30px;
+  background: #93c6f266;
+  border-radius: 0.5rem;
+  margin-bottom: 1.9rem;
+  transition: 1s;
+  color: #fff;
+  cursor: pointer;
+}
+
+.invoice__item:hover {
+  border: 1px solid #7c5dfa;
+  transform: scaleY(1.1);
+}
+
+.invoice__container {
+  padding-bottom: 200px !important;
+}
+
+/* =========== home page style end =========== */
+/* =========== invoice details style start========= */
+.back__btn {
+  margin-bottom: 1.9rem;
+}
+
+.back__btn h6 {
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.details__status {
+  display: flex;
+  align-items: center;
+  column-gap: 1.5rem;
+}
+
+.invoice__details-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30px;
+  border-radius: 0.5rem;
+  margin-bottom: 1.9rem;
+  background: #E8F0FE;
+}
+
+.details__btns {
+  display: flex;
+  align-items: center;
+  column-gap: 1rem;
+}
+
+.mark__as-btn {
+  width: 130px !important;
+  padding: 10px 5px !important;
+  background: #7c5dfa;
+  color: #fff;
+}
+
+.delete__btn {
+  background: #ec5757;
+  color: #fff;
+}
+
+.edit__btn {
+  background: #252945;
+  color: #fff;
+}
+
+.invoice__details {
+  background: #E8F0FE;
+  padding: 30px;
+  border-radius: 10px 10px 0px 0px;
+}
+
+.details__box {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1.9rem;
+}
+
+.invoice__created-date {
+  margin-bottom: 1.9rem;
+}
+
+.invoice__created-date p,
+.invoice__payment {
+  margin-bottom: 5px;
+}
+
+.invoice__client-address p {
+  margin-bottom: 5px;
+}
+
+.invoice__client-address h4 {
+  margin-bottom: 10px;
+}
+
+.invoice__item-box {
+  background: #b2b4d1;
+  padding: 30px;
+  border-radius: 7px 7px 0px 0px;
+}
+
+.list {
+  list-style: none;
+}
+
+.list__item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.list__item-box {
+  width: 25% !important;
+  text-align: right !important;
+}
+
+.item__name-box {
+  width: 50% !important;
+}
+
+.grand__total {
+  background: #b2b4d1;
+  padding: 30px;
+  margin-top: 40px;
+  margin-bottom: 30px;
+  border-radius: 0px 0px 7px 7px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* =========== invoice details style end========= */

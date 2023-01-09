@@ -25,7 +25,7 @@ import Icon from "@mui/material/Icon";
 // Material Dashboard 2 React components
 import MDBox from "components/MDBox";
 
-// Custom styles for the SidenavCollapse
+// Custom styles for the SidenavCollapseChild
 import {
   collapseItem,
   collapseIconBox,
@@ -36,8 +36,11 @@ import {
 // Material Dashboard 2 React context
 import { useMaterialUIController } from "context";
 
-function SidenavCollapse({ icon, name, active, ...rest }) {
-  // console.log("under side collapes ", name)
+function SidenavCollapseChild({ icon, name, active, ...rest }) {
+
+
+      console.log("under child collapes ", name)
+
   const [controller] = useMaterialUIController();
   const { miniSidenav, transparentSidenav, whiteSidenav, darkMode, sidenavColor } = controller;
 
@@ -83,16 +86,16 @@ function SidenavCollapse({ icon, name, active, ...rest }) {
   );
 }
 
-// Setting default values for the props of SidenavCollapse
-SidenavCollapse.defaultProps = {
+// Setting default values for the props of SidenavCollapseChild
+SidenavCollapseChild.defaultProps = {
   active: false,
 };
 
-// Typechecking props for the SidenavCollapse
-SidenavCollapse.propTypes = {
+// Typechecking props for the SidenavCollapseChild
+SidenavCollapseChild.propTypes = {
   icon: PropTypes.node.isRequired,
   name: PropTypes.string.isRequired,
   active: PropTypes.bool,
 };
 
-export default SidenavCollapse;
+export default SidenavCollapseChild;

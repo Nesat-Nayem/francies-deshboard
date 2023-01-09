@@ -47,9 +47,12 @@ import SignUp from "layouts/authentication/sign-up";
 import BakeryDiningIcon from '@mui/icons-material/BakeryDining';
 // @mui icons
 import Icon from "@mui/material/Icon";
-import Services from "layouts/services";
+import Services from "../src/components/Services/Services";
 import Invoince from "layouts/invoince";
 import Revinue from "layouts/revinue";
+import Mainlayout from "layouts/mainlayout";
+import AdminReports from "layouts/report";
+import Test from "layouts/test";
 
 const routes = [
   {
@@ -68,6 +71,7 @@ const routes = [
     route: "/profile",
     component: <Profile />,
   },
+
   {
     type: "collapse",
     name: "Customers",
@@ -76,22 +80,23 @@ const routes = [
     route: "/tables",
     component: <Tables />,
   },
-  // {
-  //   type: "collapse",
-  //   name: "Services",
-  //   key: "billing",
-  //   icon: <Icon fontSize="small">receipt_long</Icon>,
-  //   route: "/billing",
-  //   component: <Billing />,
-  // },
+
   {
     type: "collapse",
-    name: "Services",
-    key: "billing",
-    icon: <Icon fontSize="small">receipt_long</Icon>,
+    name: "Invoice",
+    key: "notifications",
+    icon: <Icon fontSize="small">receipt</Icon>,
+    route: "/invoince",
+    component: <Invoince />,
+  },
+  {
+    type: "title",
+    title: "Accounting",
+    // key: "billing",
+    // icon: <Icon fontSize="small">receipt_long</Icon>,
     // icon: <Icon fontSize="small"><receipt_long /></Icon>,
-    route: "/billing",
-    component: <Services />,
+    // route: "/billing",
+    // component: <Services />,
   },
   // {
   //   type: "collapse",
@@ -101,14 +106,37 @@ const routes = [
   //   route: "/rtl",
   //   component: <RTL />,
   // },
-  {
-    type: "collapse",
-    name: "Invoince",
-    key: "notifications",
-    icon: <Icon fontSize="small">receipt</Icon>,
-    route: "/invoince",
-    component: <Invoince />,
-  },
+
+
+  // {
+  //   type: "collapse",
+  //   name: "test",
+  //   key: "test",
+  //   icon: <Icon fontSize="small">receipt</Icon>,
+  //   route: "/test",
+  //   component: <Mainlayout />,
+  //   child:[
+  //     {
+  //       type: "collapse",
+  //       name: "test one",
+  //       key: "testone",
+  //       icon: <Icon fontSize="small">receipt</Icon>,
+  //       route: "/testone",
+  //       component: <Test />,
+  //     },
+  //     {
+  //       type: "collapse", 
+  //       name: "test tow",
+  //       key: "testtow",
+  //       icon: <Icon fontSize="small">receipt</Icon>,
+  //       route: "/testtow",
+  //       component: <Test />,
+  //     }
+  //   ]
+  // },
+
+
+
   // {
   //   type: "collapse",
   //   name: "Invoince",
@@ -120,7 +148,7 @@ const routes = [
 
   {
     type: "collapse",
-    name: "Ravinew",
+    name: "Revenue",
     key: "sign-in",
     icon: <Icon fontSize="small">stacked_bar_chart</Icon>,
     route: "/revenue",
@@ -139,8 +167,8 @@ const routes = [
     name: "Report",
     key: "sign-up",
     icon: <Icon fontSize="small">summarize</Icon>,
-    route: "",
-    component: <SignUp />,
+    route: "/report",
+    component: <AdminReports />,
   },
   // {
   //   type: "collapse",

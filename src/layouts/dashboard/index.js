@@ -27,13 +27,16 @@ import ReportsBarChart from "examples/Charts/BarCharts/ReportsBarChart";
 import ReportsLineChart from "examples/Charts/LineCharts/ReportsLineChart";
 import ComplexStatisticsCard from "examples/Cards/StatisticsCards/ComplexStatisticsCard";
 
+// import { mockTransactions } from "../../data/mockData";
+import { mockTransactions } from "./data/mockData";
 // Data
 import reportsBarChartData from "layouts/dashboard/data/reportsBarChartData";
 import reportsLineChartData from "layouts/dashboard/data/reportsLineChartData";
-
+import { Box,Typography } from "@mui/material";
 // Dashboard components
 import Projects from "layouts/dashboard/components/Projects";
 import OrdersOverview from "layouts/dashboard/components/OrdersOverview";
+import AdminChart from "./components/AdminChart/AdminChart.js";
 
 function Dashboard() {
   const { sales, tasks } = reportsLineChartData;
@@ -48,7 +51,7 @@ function Dashboard() {
               <ComplexStatisticsCard
                 color="dark"
                 icon="weekend"
-                title="Bookings"
+                title="Today Inquiry"
                 count={281}
                 percentage={{
                   color: "success",
@@ -92,8 +95,8 @@ function Dashboard() {
               <ComplexStatisticsCard
                 color="primary"
                 icon="person_add"
-                title="Followers"
-                count="+91"
+                title="Complete Work"
+                count="91"
                 percentage={{
                   color: "success",
                   amount: "",
@@ -148,9 +151,107 @@ function Dashboard() {
           <Grid container spacing={3}>
             <Grid item xs={12} md={6} lg={8}>
               <Projects />
+{/* weekly grap  */}
+
+{/* <Box
+          gridColumn="span 8"
+          gridRow="span 2"
+          backgroundColor="gray"
+        >
+          <Box
+            mt="25px"
+            p="0 30px"
+            display="flex "
+            justifyContent="space-between"
+            alignItems="center"
+            backgroundColor="gray"
+          >
+            <Box>
+              <Typography
+                variant="h5"
+                fontWeight="700"
+                // fontFamily="Bitter"
+                // fontWeight:700
+                color="black"
+                backgroundColor="gray"
+                marginBottom="10px"
+              >
+                Weekly Report
+              </Typography>
+            </Box>
+          </Box>
+          <Box
+            height="247px"
+            // m="-20px 0 0 0 "
+            style={{ backgroundColor: "#fff" }}
+          >
+            <AdminChart />
+          </Box>
+        </Box> */}
+{/* weekly grap  */}
+
             </Grid>
             <Grid item xs={12} md={6} lg={4}>
               <OrdersOverview />
+
+              {/* here recent transtion  */}
+              {/* <Box
+          gridColumn="span 4"
+          gridRow="span 3"
+          backgroundColor="gray"
+          overflow="auto"
+          height="306px"
+        >
+          <Box
+            display="flex"
+            justifyContent="space-between"
+            alignItems="center"
+            borderBottom="4px solid gray"
+            colors="black"
+            p="15px"
+          >
+            <Typography color="black" 
+                fontWeight="700"
+                // fontFamily="Jost"
+              
+            variant="h5" >
+              Recent Transactions
+            </Typography>
+          </Box>
+          {mockTransactions.map((transaction, i) => (
+            <Box
+              key={`${transaction.txId}-${i}`}
+              display="flex"
+              justifyContent="space-between"
+              alignItems="center"
+              borderBottom="4px solid gray"
+              p="15px"
+            >
+              <Box>
+                <Typography
+                  color="gray"
+                  variant="h5"
+                  fontWeight="600"
+                >
+                  {transaction.txId}
+                </Typography>
+                <Typography color="black">
+                  {transaction.user}
+                </Typography>
+              </Box>
+              <Box color="black">{transaction.date}</Box>
+              <Box
+                // backgroundColor={colors.redAccent[300]}
+                backgroundColor='#27A9E3'
+                p="5px 10px"
+                borderRadius="4px"
+              >
+                ${transaction.cost}
+              </Box>
+            </Box>
+          ))}
+        </Box> */}
+              {/* here recent transtion  */}
             </Grid>
           </Grid>
         </MDBox>
